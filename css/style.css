@@ -1,0 +1,391 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400);
+
+body, html {
+  font-family: 'Open Sans', sans-serif;;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  color: #666666;
+  font-size: 16px;
+}
+
+h1 {
+  letter-spacing: normal;
+  font-size: 48px;
+  letter-spacing: 0.06em;
+}
+
+h1 strong {
+  font-weight: 900;
+}
+
+h2 {
+  text-transform: uppercase;
+  line-height: 20px;
+  margin: 0;
+  color: #666666 !important;
+  letter-spacing: 0.06em;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 900;
+}
+
+h4 {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+h5 {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+p {
+  font-size: 16px;
+}
+hr {
+
+    border-top: none;
+}
+p.intro {
+  font-size: 18px;
+  margin: 12px 0 0;
+  line-height: 24px;
+}
+
+a {
+  color: #000000;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: #363636;
+}
+
+.clearfix {
+  display: inline-block;
+}
+
+* html .clearfix {
+  height: 1%;
+}
+
+.clearfix {
+  display: block;
+}
+
+ul, ol {
+  padding: 0;
+  webkit-padding: 0;
+  moz-padding: 0;
+}
+
+/* Navigation */
+#tmpl-menu {
+  padding: 20px;
+  transition: all 0.8s;
+}
+
+#tmpl-menu.navbar-default {
+  background-color: #ffffff;
+  border-bottom: 1px solid #666666;
+}
+
+#tmpl-menu a.navbar-brand {
+  text-transform: uppercase;
+  font-size: 22px;
+  color: #666666;
+  font-weight: 900;
+}
+
+#tmpl-menu .navbar-brand {
+height: 60px;
+}
+
+#tmpl-menu.navbar-default .navbar-nav>li>a,
+#tmpl-menu.navbar-inverse .navbar-nav>li>a {
+  text-transform: uppercase;
+  color: #666666;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.on {
+  background-color: #ffffff !important;
+  padding: 0 !important;
+}
+
+.logo-image {
+  width: 35px;
+  height: 35px;
+	margin-right:0.5rem;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.nav-link.active,
+.nav-link.active:hover,
+.nav-link.active:focus {
+  color: black !important;
+  text-decoration: underline;
+  background-color: transparent;
+  font-weight: 700;
+}
+
+.navbar-toggle {
+  border-radius: 0;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #cccccc;
+  border-color: #cccccc;
+}
+
+.navbar-default .navbar-toggle:hover>.icon-bar {
+  background-color: #FFF;
+}
+
+.nav>li>a {
+  position: relative;
+  display: block;
+  padding: 10px 11px;
+}
+
+
+
+
+/* tmpl-Style */
+#tmpl-home, #tmpl-about, #tmpl-aktuell, #tmpl-img {
+  width: 100%;
+  background: white;
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+
+  padding: 80px 0;
+	min-height: 400px;
+}
+
+#tmpl-home, #tmpl-about, #tmpl-aktuell, #tmpl-img .overlay {
+  width: 100%;
+  min-height: 400px;
+  background-attachment: fixed;
+}
+
+#tmpl-home p.lead {
+  color: black;
+  opacity: 0.7;
+}
+
+#tmpl-home .content
+{
+	/* background-image: url("../images/parkplatz_transform.png");
+  background-color: white;
+  background-position: 85% 65%;
+  background-repeat: no-repeat; */
+  /* color: black; */
+	/* background-size: 200px 200px; */
+}
+.teaser {
+  color: black;
+
+  line-height: 32px;
+  letter-spacing: 0.1em;
+	margin-left: 1rem;
+}
+.teaser p {
+  font-size: 26px;
+}
+.teaser_headline {
+	margin-top: 2rem;
+text-align: center;
+	margin-left: 5rem;
+}
+.teaser_call{
+font-weight: bold;
+font-size: 26px;
+
+}
+#tmpl-home h1{
+	text-align: center;
+}
+
+
+.content {
+  position: relative;
+  padding: 15% 15% 0 15%;
+  text-align: left;
+}
+
+.color {
+  color: #black;
+}
+
+a.fa.fa-angle-down {
+  padding: 10px 15px;
+  color: #fff;
+  border: 2px solid #b4b4b4;
+  border-radius: 50%;
+  font-size: 24px;
+  margin-top: 200px;
+  transition: all 0.5s;
+}
+
+a.fa.fa-angle-down:hover {
+  background: #cccccc;
+  color: #ffffff;
+  border: 2px solid #cccccc;
+}
+
+/* About Section */
+.red_bg {
+  background-image: linear-gradient(90deg, #ffffff 12%, rgba(143, 8, 8, 0.7) 12%, rgba(143, 8, 8, 0.7) 25%, #ffffff 25%, #ffffff 100%);
+}
+
+
+
+
+button.btn.tmpl-btn.btn-default {
+  float: right;
+  background: #cccccc;
+  border: 0;
+  border-radius: 0;
+  padding: 10px 40px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.btn:active, .btn.active {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+  outline: thin dotted;
+  outline: none;
+  outline-offset: none;
+}
+
+/* Footer */
+nav#footer {
+  background: #E6D5C2;
+  color: #ffffff;
+  padding: 20px 0 15px 0;
+}
+
+nav#footer .fnav {
+  vertical-align: middle;
+}
+
+ul.footer-social li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+nav#footer p {
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+#footer i.fa {
+  height: 30px;
+  width: 30px;
+  border: 2px solid #8c8c8c;
+  font-size: 20px;
+  padding: 4px 5px;
+  border-radius: 50%;
+  color: #8c8c8c;
+  transition: all 0.5s;
+}
+
+#footer i.fa:hover {
+  background: #cccccc;
+  border-color: #cccccc;
+  color: #ffffff;
+}
+
+body.has-navbar {
+  /* tl */
+  margin-top: 91px;
+}
+
+ul {
+  /* tl */
+  list-style-position: inside;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
+  /* tl */
+  background-color: #222;
+}
+
+.list-group-item:first-child, .list-group-item:last-child {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.inner{
+	padding: 2rem;
+	margin-right: 8%;
+  color: black;
+}
+.inner_contact{
+	color: black;
+	font-weight: bold;
+  line-height: 32px;
+  letter-spacing: 0.1em;
+	font-size: 22px;
+	margin-top: 35px;
+  margin-left: 17%;
+}
+
+
+/* mehr lesen*/
+#summary {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+#summary p.collapse:not(.show) {
+    height: 72px !important;
+    overflow: hidden;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+#summary p.collapsing {
+    min-height: 72px !important;
+}
+
+#summary a{
+  display: block;
+  text-align: right;
+}
+#summary a.collapsed:after  {
+    content: '+ Read More';
+}
+
+#summary a:not(.collapsed):after {
+    content: '- Read Less';
+}
+
+
+
+ .object-fit_fill { object-fit: contain }

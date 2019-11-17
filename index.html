@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Parkplatz_transform</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+  <!-- Stylesheet
+    ================================================== -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/responsive.css">
+
+</head>
+
+<body>
+  <!-- Navigation
+    ==========================================-->
+  <nav id="tmpl-menu" class="navbar navbar-default navbar-expand-lg fixed-top">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <a class="navbar-brand page-scroll" href="index.html">
+          <div class="logo-image">
+            <img src="images/logo.png" class="img-fluid">
+          </div>Parkplatz_transform
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#pt-navbar-collapse-1" aria-controls="pt-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="pt-navbar-collapse-1">
+        <ul class="nav navbar-nav ml-auto mt-2 mt-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#tmpl-aktuell-accelerate" class="page-scroll">Aktuelles</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tmpl-socialMedia-accelerate" class="page-scroll">SocialMedia</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tmpl-about-accelerate" class="page-scroll">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tmpl-img-accelerate" class="page-scroll">Bilder</a></li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+
+  <!-- Home Page
+    ==========================================-->
+  <div data-spy="scroll" data-target="#tmpl-menu" data-offset="0">
+    <div id="app">
+      <div id="tmpl-home" class="text-center">
+        <div class="overlay">
+          <div class="content">
+            <div class="row">
+              <div class="col-md-4 order-md-last text-center text-md-right">
+                <img src="images/logo320.png" alt="" width="320px" height="auto">
+              </div>
+              <div class="col-md-8">
+                <div class="card teaser">
+                  <div class="card-body">
+                    <p>Du streikst für ein gutes Klima?</p>
+                    <p>Du willst mehr Raum und Luft zum Atmen?</p>
+                    <p>Du findest, dass Berlin unter zu vielen Autos leidet?</p>
+                    <hr>
+                    <hr>
+                    <p class="teaser_call">Dann komm aus'm Quark und mach bei uns mit!</p>
+                  </div>
+              </div>
+              </div>
+
+            </div>
+
+
+            <div class="teaser_headline">
+            <h1>
+              <strong>
+                <span>Parkplatz_transform</span>
+              </strong>
+            </h1>
+            <p class="lead"><strong>twitter | <a href="mailto:info@xtransform.org">info@xtransform.org</a> </strong></p>
+          </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Aktuell
+    ==========================================-->
+      <div id="tmpl-aktuell-accelerate" class="text-center">
+        <div class="overlay">
+          <div class="content">
+            <h1>
+              <strong>
+                <span>Aktuelles</span>
+              </strong>
+            </h1>
+          </div>
+        </div>
+      </div>
+      <!-- Aktuell
+    ==========================================-->
+
+      <div id="tmpl-aktuell">
+        <div class="container" >
+
+          <div class="row">
+            <div class="col-6 mt-5" v-for="date in dates">
+              <div class="card">
+                <div class="card-header">{{ date.field_date[0].value }}</div>
+                <div class="card-body">
+                  <h4 class="card-title">{{ date.title[0].value }}</h4>
+
+                  <p class="card-text" v-html="date.body[0].value"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--SocialMedia
+    ==========================================-->
+      <div id="tmpl-socialMedia-accelerate" class="text-center">
+        <div class="overlay">
+          <div class="content">
+            <h1>
+              <strong>
+                <span>SocialMedia</span>
+              </strong>
+            </h1>
+          </div>
+        </div>
+      </div>
+      <!-- Aktuell
+    ==========================================-->
+
+      <div id="tmpl-aktuell">
+        <div class="container" id="app">
+
+          <div class="row">
+            <div class="col-12 mt-5">
+              <div class="card">
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- About Us Page
+  ==========================================-->
+      <div id="tmpl-about-accelerate" class="text-center">
+        <div class="overlay">
+          <div class="content">
+            <h1>
+              <strong>
+                <span>About</span>
+              </strong>
+            </h1>
+          </div>
+        </div>
+      </div>
+      <!-- About Us Page
+  ==========================================-->
+      <div id="tmpl-about">
+
+        <div class="red_bg">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-10">
+
+
+                <div class="inner">
+                  <h1>
+                    <strong>
+                      <span>Initiative Parkplatz_<wbr>transform</span>
+                    </strong>
+                  </h1>
+                      <div id="summary">
+                        <p class="collapse" id="collapseSummary">
+                          Fast alle sind sich einig: Berlin leidet unter zu vielen Autos. Autos verschmutzen die Luft in unserer Stadt. Autos verletzen und töten Radfahrende und Fußgänger*innen. Autos sind mitverantwortlich für die Klimakatastrophe.
+                          Autos
+                          machen Lärm und verbrauchen wertvolle Rohstoffe. Hinzu kommt: Auch Autos, die sich gar nicht bewegen, nehmen viel Raum ein. Meist ist es öffentlicher Raum, der durch parkende PKW privatisiert wird. Wir denken: Öffentlicher
+                          Raum kann
+                          besser genutzt werden. <br>
+                          <br>
+
+                        Wie viel Raum parkende Autos in Berlin einnehmen, ist nicht klar. Nur dort, wo Parken kostenpflichtig ist, gibt es Parkplatz-Daten. Das ist jedoch nur sehr punktuell der Fall und so weiß in vielen Kiezen derzeit niemand,
+                          wie viele
+                          Parkplätze es gibt. Das wollen wir ändern. Wir wollen sichtbar machen, wie viel öffentlichen Raum Parkplätze tatsächlich einnehmen. <br>
+                          <br>
+                        Mit unseren Zahlen wollen wir Druck dafür machen, dass Parken durchgängig kostenpflichtig wird. Denn wir wollen langfristig eine autofreie Stadt: Mit viel Raum für städtisches Grün, für Parks, für ÖPNV, für Fuß- und
+                          Radverkehr, für
+                          Cafés, Kultur und Wohnraum. Wir wollen Daten liefern, die Berliner*innen ermuntern, kreativ zu werden und neue sinnvolle Nutzungen unseres städtischen Raums zu entwickeln. Deshalb wollen wir gemeinsam Parkplätze zählen, um
+                          ein
+                          Bewusstsein für das Ausmaß des Parkplatzproblems zu schaffen. <br>
+                          <br>
+                        Wir sind eine ehrenamtliche Initiative und wollen möglichst viele Menschen am Zählen beteiligen. So kann jede*r sehen, wie viel Raum derzeit von parkenden Autos beschlagnahmt wird. Wir haben einen Leitfaden und eine
+                          Technologie
+                          entwickelt, die das Zählen einfach macht. Wir wollen hochwertige Daten liefern, damit sie von Verbänden, Initiativen, Verwaltung und allen Interessierten genutzt werden. Es geht um Ideen für alternative Raumnutzung. <br>
+                          <br>
+                        Wir beginnen dort, wo das Problem am größten ist und dort, wo Alternativen zu Parkplätzen besonders greifbar sind. Wir wollen durch unsere Zählungen diejenigen in Zivilgesellschaft, Politik und Verwaltung stärken, die unser
+                          Anliegen
+                          unterstützen.</p>
+                        <a class="collapsed" data-toggle="collapse" href="#collapseSummary" aria-expanded="false" aria-controls="collapseSummary"></a>
+                      </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <p class="inner_contact">Kontakt:<a href="mailto:info@xtransform.org">info@xtransform.org</a> </strong></p>
+
+
+      </div>
+
+      <!-- Bilder
+    ==========================================-->
+      <div id="tmpl-img-accelerate" class="text-center">
+        <div class="overlay">
+          <div class="content">
+            <h1>
+              <strong>
+                <span>Bilder</span>
+              </strong>
+            </h1>
+          </div>
+        </div>
+      </div>
+      <!-- Bilder
+    ==========================================-->
+
+      <div id="tmpl-img">
+        <div class="container">
+
+          <div class="row">
+            <div class="col-md-4" v-for="image in images">
+            <img v-bind:src=" image.field_images[0].url " alt="" width="300px" height="300px" class="object-fit_fill m-4">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- vuejs -->
+  <script type="text/javascript" src="js/vue.js"></script>
+  <script type="text/javascript" src="js/vue-resource.js"></script>
+  <script type="text/javascript" src="js/vue-router.js"></script>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/SmoothScroll.js"></script>
+  <script type="text/javascript" src="js/jquery.isotope.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+
+  <!-- Javascripts
+    ================================================== -->
+  <script type="text/javascript" src="js/main.js"></script>
+  <!-- <script type="text/javascript">
+    $(function() {
+      $('[data-toggle="tooltip"]')
+        .tooltip({
+          html: true
+        });
+    })
+  </script> -->
+</body>
+
+</html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -7,6 +7,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Parkplatz_transform</title>
 
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto+Mono:400,700&display=swap" rel="stylesheet">
+
+  <script type="text/javascript" src="js/modernizr.custom.js"></script>
   <!-- Bootstrap -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
@@ -14,7 +17,25 @@
     ================================================== -->
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/responsive.css">
-
+  <!-- Favicons
+    ================================================== -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
@@ -27,7 +48,9 @@
         <a class="navbar-brand page-scroll" href="index.html">
           <div class="logo-image">
             <img src="images/logo.png" class="img-fluid">
-          </div>Parkplatz_transform
+
+          </div>
+          <span class="align-top">Parkplatz_transform</span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#pt-navbar-collapse-1" aria-controls="pt-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -51,7 +74,7 @@
   <!-- Home Page
     ==========================================-->
   <div data-spy="scroll" data-target="#tmpl-menu" data-offset="0">
-    <div id="app">
+    <div id="app" class="container">
       <div id="tmpl-home" class="text-center">
         <div class="overlay">
           <div class="content">
@@ -78,7 +101,7 @@
             <div class="teaser_headline">
             <h1>
               <strong>
-                <span>Parkplatz_transform</span>
+                <span>Parkplatz_<wbr>transform</span>
               </strong>
             </h1>
             <p class="lead"><strong>twitter | <a href="mailto:info@xtransform.org">info@xtransform.org</a> </strong></p>
@@ -108,9 +131,9 @@
         <div class="container" >
 
           <div class="row">
-            <div class="col-6 mt-5" v-for="date in dates">
-              <div class="card">
-                <div class="card-header">{{ date.field_date[0].value }}</div>
+            <div class="col-md-6" v-for="date in dates">
+              <div class="card event">
+                <div class="card-header">{{ moment(date.field_date[0].value).format('YYYY-MM-DD')  }}</div>
                 <div class="card-body">
                   <h4 class="card-title">{{ date.title[0].value }}</h4>
 
@@ -137,8 +160,8 @@
       <!-- Aktuell
     ==========================================-->
 
-      <div id="tmpl-aktuell">
-        <div class="container" id="app">
+      <div id="tmpl-socialMedia">
+        <div class="container">
 
           <div class="row">
             <div class="col-12 mt-5">
@@ -148,7 +171,7 @@
           </div>
         </div>
       </div>
-
+  </div>
       <!-- About Us Page
   ==========================================-->
       <div id="tmpl-about-accelerate" class="text-center">
@@ -237,7 +260,7 @@
       <div id="tmpl-img">
         <div class="container">
 
-          <div class="row">
+          <div class="row text-center">
             <div class="col-md-4" v-for="image in images">
             <img v-bind:src=" image.field_images[0].url " alt="" width="300px" height="300px" class="object-fit_fill m-4">
             </div>

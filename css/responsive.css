@@ -1,37 +1,70 @@
 @media (max-width: 768px) {
   .content {
-    padding: 40% 0 0;
+    padding: 2% 0 0;
   }
-  .site {
-    margin: 0 3%;
-  }
-  #tmpl-home .content {
+  .on {
 
+    padding: 1rem!important;
   }
-  #tmpl-home .teaser{
+  .tmpl{
+        padding: 10px 0 40px 0;
+  }
+
+  .event {
+    margin: 0.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  #tmpl-home .teaser {
     margin-left: 0;
     margin-top: 2rem;
   }
-  .inner{
+
+  .inner {
     margin-right: 0;
-    padding:1rem;
+    padding: 1rem;
   }
-  .inner{
-    margin-right: 0;
-    padding:1rem;
+
+  .inner_contact {
+    font-size: 19px;
+    margin-left: 4%;
+  }
+
+  .teaser p {
+    font-size: 19px;
+  }
+
+  h1 {
+    font-size: 36px;
+    letter-spacing: 0.06em;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .object-fit_contain {
+    margin: 0.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  #summary p.collapse:not(.show) {
+    height: 80px !important;
+  }
+
+  #summary p.collapsing {
+    min-height: 80px !important;
   }
 }
 
 @media (max-width: 603px) {
-  #tmpl-menu.navbar-default {
-    background-color: rgba(0, 0, 0, 0.79);
+  #tmpl-menu .navbar-brand {
+    height: auto;
+    margin-right: 0;
   }
 
-  #tmpl-works li.pull-right, #tmpl-works li.pull-left {
-    margin-top: 10px;
-    float: none !important;
-    text-align: center;
-    display: block;
+  .logo-image {
+    display: none;
   }
 
   label {
@@ -47,8 +80,6 @@
   .hover-bg .hover-text {
     padding: 12% 10%;
   }
-
-
 }
 
 @media (max-width: 360px) {

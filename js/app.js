@@ -7,14 +7,15 @@ new Vue({
     data: {
       dates: '',
 
-      images:''
+      images:'',
       // imagesUrl:''
-
+      downloads:''
     },
 
     ready: function(){
         this.getImages();
         this.getDates();
+        this.getFiles();
 
     },
 
@@ -33,6 +34,15 @@ new Vue({
                 // this.$set('imagesUrl', images[0].field_images[0].url);
 
             });
+        },
+        getFiles: function(){
+            // this.$set('image', '');
+            this.$http.get(apiURL+ '/downloads', function(downloads){
+                this.$set('downloads', downloads);
+                // this.$set('imagesUrl', images[0].field_images[0].url);
+
+            });
         }
+
     }
 });

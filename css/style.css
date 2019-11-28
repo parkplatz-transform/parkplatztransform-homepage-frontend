@@ -1,7 +1,5 @@
-
 body, html {
   font-family: 'Roboto Mono', monospace;
-
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
   color: #666666;
@@ -52,10 +50,11 @@ h5 {
 p {
   font-size: 16px;
 }
-hr {
 
-    border-top: none;
+hr {
+  border-top: none;
 }
+
 p.intro {
   font-size: 18px;
   margin: 12px 0 0;
@@ -63,7 +62,7 @@ p.intro {
 }
 
 a {
-  color: #000000;
+  color: #222;;
 }
 
 a:hover,
@@ -108,9 +107,6 @@ ul, ol {
   font-weight: 900;
 }
 
-#tmpl-menu .navbar-brand {
-height: 60px;
-}
 
 #tmpl-menu.navbar-default .navbar-nav>li>a,
 #tmpl-menu.navbar-inverse .navbar-nav>li>a {
@@ -128,7 +124,8 @@ height: 60px;
 .logo-image {
   width: 35px;
   height: 35px;
-	margin-right:0.5rem;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
   overflow: hidden;
   display: inline-block;
 }
@@ -136,7 +133,7 @@ height: 60px;
 .nav-link.active,
 .nav-link.active:hover,
 .nav-link.active:focus {
-  color: black !important;
+  color: #222; !important;
   text-decoration: underline;
   background-color: transparent;
   font-weight: 700;
@@ -162,73 +159,80 @@ height: 60px;
   padding: 10px 11px;
 }
 
-
-
-
 /* tmpl-Style */
-#tmpl-home, #tmpl-about, #tmpl-aktuell, #tmpl-socialMedia, #tmpl-img {
+
+.tmpl {
   width: 100%;
   background: white;
   background-size: cover;
   background-position: right;
   background-repeat: no-repeat;
-
   padding: 80px 0;
-	min-height: 400px;
+  min-height: 400px;
+}
+.tmpl-top {
+  width: 100%;
+  background: white;
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+  padding: 80px 0;
+  min-height: 400px;
 }
 
-#tmpl-home, #tmpl-about, #tmpl-aktuell, #tmpl-img, #tmpl-socialMedia .overlay {
+.tmpl .overlay {
   width: 100%;
   min-height: 400px;
   background-attachment: fixed;
 }
 
 #tmpl-home p.lead {
-  color: black;
+  color: #222;;
   opacity: 0.7;
 }
 
-#tmpl-home .content
-{
-	/* background-image: url("../images/parkplatz_transform.png");
+#tmpl-home .content {
+  /* background-image: url("../images/parkplatz_transform.png");
   background-color: white;
   background-position: 85% 65%;
   background-repeat: no-repeat; */
   /* color: black; */
-	/* background-size: 200px 200px; */
+  /* background-size: 200px 200px; */
 }
-.teaser {
-  color: black;
 
+.teaser {
+  color: #222;;
   line-height: 32px;
   letter-spacing: 0.1em;
-	margin-left: 1rem;
+  margin-left: 1rem;
 }
+
 .teaser p {
   font-size: 26px;
 }
+
 .teaser_headline {
-	margin-top: 2rem;
-text-align: center;
-}
-.teaser_call{
-font-weight: bold;
-font-size: 26px;
-
-}
-#tmpl-home h1{
-	text-align: center;
+  margin-top: 2rem;
+  text-align: center;
 }
 
+.teaser_call {
+  font-weight: bold;
+  font-size: 26px;
+}
+
+#tmpl-home h1 {
+  text-align: center;
+}
 
 .content {
   position: relative;
-  padding: 8% 0 ;
+  padding: 8% 0;
   text-align: left;
 }
 
 .color {
-  color: black;
+  color: #222;;
 }
 
 a.fa.fa-angle-down {
@@ -251,9 +255,6 @@ a.fa.fa-angle-down:hover {
 .red_bg {
   background-image: linear-gradient(90deg, #ffffff 2%, rgba(143, 8, 8, 0.7) 2%, rgba(143, 8, 8, 0.7) 20%, #ffffff 20%, #ffffff 100%);
 }
-
-
-
 
 button.btn.tmpl-btn.btn-default {
   float: right;
@@ -343,21 +344,21 @@ ul {
   border-bottom-left-radius: 0px;
 }
 
-.inner{
-	padding: 2rem;
-	margin-right: 8%;
-  color: black;
-}
-.inner_contact{
-	color: black;
-	font-weight: bold;
-  line-height: 32px;
-  letter-spacing: 0.1em;
-	font-size: 22px;
-	margin-top: 35px;
-  margin-left: 17%;
+.inner {
+  padding: 2rem;
+  margin-right: 8%;
+  color: #222;;
 }
 
+.inner_contact {
+  color: #222;;
+  font-weight: bold;
+  line-height: 32px;
+  letter-spacing: 0.1em;
+  font-size: 22px;
+  margin-top: 35px;
+  margin-left: 17%;
+}
 
 /* mehr lesen*/
 #summary {
@@ -366,49 +367,67 @@ ul {
 }
 
 #summary p.collapse:not(.show) {
-    height: 72px !important;
-    overflow: hidden;
-
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
+  height: 72px !important;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 0;
+  -webkit-box-orient: vertical;
 }
 
 #summary p.collapsing {
-    min-height: 72px !important;
+  min-height: 72px !important;
 }
 
-#summary a{
+#summary a {
   display: block;
   text-align: right;
 }
-#summary a.collapsed:after  {
-    content: '+ Mehr lesen';
+
+#summary a.collapsed:after {
+  content: '+ Mehr lesen';
 }
 
 #summary a:not(.collapsed):after {
-    content: '- Weniger lesen';
+  content: '- Weniger lesen';
 }
 
+.object-fit_contain {
+  margin: 2rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  object-fit: contain
+}
 
+.card {
+  color: #222;
+  border: none;
+}
 
- .object-fit_fill {
-   background-color: #cccccc;
-   object-fit: contain
-  }
-
-  .card{
-    border: none;
-  }
-
+.card.event {
+  background-image: linear-gradient(90deg, rgba(143, 8, 8, 0.7) 0%, rgba(143, 8, 8, 0.7) 5%, #ffffff 5%, #ffffff 100%);
+  padding-left: 0.75rem;
+  border: 1px solid rgba(143, 8, 8, 0.7);
+}
 
 .card-header {
-    padding: 0.75rem 1.25rem;
-    margin-bottom: 0;
-    background-color: rgba(0, 0, 0, 0.01);
-    border-bottom: 1px solid rgba(143, 8, 8, 0.5);
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: rgba(0, 0, 0, 0.00);
+  border-top: none;
+  border-bottom: none;
 }
 
-.event{
+.card-footer {
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: rgba(0, 0, 0, 0.00);
+  border-top: none;
+  border-bottom: 1px solid rgba(143, 8, 8, 0.7);
+}
+
+.event {
   margin: 2.5rem;
+}
+
+.twitter-follow-button {
+  vertical-align: bottom; 
 }

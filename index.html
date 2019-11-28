@@ -12,7 +12,6 @@
   <script type="text/javascript" src="js/modernizr.custom.js"></script>
   <!-- Bootstrap -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-  <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
   <!-- Stylesheet
     ================================================== -->
   <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -41,10 +40,10 @@
 <body>
   <!-- Navigation
     ==========================================-->
-  <nav id="tmpl-menu" class="navbar navbar-default navbar-expand-lg fixed-top">
+  <nav id="tmpl-menu" class = "navbar navbar-expand-lg navbar-light fixed-top navbar-default">
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
+
         <a class="navbar-brand page-scroll" href="index.html">
           <div class="logo-image">
             <img src="images/logo.png" class="img-fluid">
@@ -55,7 +54,7 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#pt-navbar-collapse-1" aria-controls="pt-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-      </div>
+
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="pt-navbar-collapse-1">
@@ -63,6 +62,7 @@
           <li class="nav-item"><a class="nav-link" href="#tmpl-aktuell-accelerate" class="page-scroll">Aktuelles</a></li>
           <li class="nav-item"><a class="nav-link" href="#tmpl-socialMedia-accelerate" class="page-scroll">SocialMedia</a></li>
           <li class="nav-item"><a class="nav-link" href="#tmpl-about-accelerate" class="page-scroll">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tmpl-InfoMaterial-accelerate" class="page-scroll">InfoMaterial</a></li>
           <li class="nav-item"><a class="nav-link" href="#tmpl-img-accelerate" class="page-scroll">Bilder</a></li>
         </ul>
       </div>
@@ -75,7 +75,7 @@
     ==========================================-->
   <div data-spy="scroll" data-target="#tmpl-menu" data-offset="0">
     <div id="app" class="container">
-      <div id="tmpl-home" class="text-center">
+      <div id="tmpl-home" class="tmpl-top text-center">
         <div class="overlay">
           <div class="content">
             <div class="row">
@@ -104,7 +104,7 @@
                 <span>Parkplatz_<wbr>transform</span>
               </strong>
             </h1>
-            <p class="lead"><strong>twitter | <a href="mailto:info@xtransform.org">info@xtransform.org</a> </strong></p>
+            <p class="lead"><a href="https://twitter.com/ParkplatzT?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-screen-name="false" data-show-count="false" class="align-bottom">Follow @ParkplatzT</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> | <a href="mailto:info@xtransform.org">info@xtransform.org</a> </strong></p>
           </div>
           </div>
         </div>
@@ -127,18 +127,20 @@
       <!-- Aktuell
     ==========================================-->
 
-      <div id="tmpl-aktuell">
+      <div id="tmpl-aktuell" class="tmpl">
         <div class="container" >
 
           <div class="row">
             <div class="col-md-6" v-for="date in dates">
               <div class="card event">
-                <div class="card-header">{{ moment(date.field_date[0].value).format('YYYY-MM-DD')  }}</div>
+                <div class="card-header d-flex justify-content-between font-weight-bold"><span>{{ date.field_day[0].value  }}</span> <span>{{ date.field_time[0].value  }}</span></div>
                 <div class="card-body">
                   <h4 class="card-title">{{ date.title[0].value }}</h4>
 
                   <p class="card-text" v-html="date.body[0].value"></p>
                 </div>
+                <div class="card-footer d-flex justify-content-between font-weight-bold"><span>{{ date.field_location_street_and_number[0].value  }}</span><span>{{ date.field_location[0].value  }}</span>
+                  </div>
               </div>
             </div>
           </div>
@@ -157,14 +159,15 @@
           </div>
         </div>
       </div>
-      <!-- Aktuell
+      <!-- SocialMedia
     ==========================================-->
 
-      <div id="tmpl-socialMedia">
+      <div id="tmpl-socialMedia" class="tmpl">
         <div class="container">
 
           <div class="row">
             <div class="col-12 mt-5">
+              <a class="twitter-timeline" data-height="600" href="https://twitter.com/ParkplatzT?ref_src=twsrc%5Etfw">Tweets by ParkplatzT</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
               <div class="card">
 
             </div>
@@ -187,7 +190,7 @@
       </div>
       <!-- About Us Page
   ==========================================-->
-      <div id="tmpl-about">
+      <div id="tmpl-about" class="tmpl">
 
         <div class="red_bg">
           <div class="container">
@@ -236,10 +239,41 @@
         </div>
 
 
-        <p class="inner_contact">Kontakt:<a href="mailto:info@xtransform.org">info@xtransform.org</a> </strong></p>
+        <p class="inner_contact">Kontakt:<wbr><a href="mailto:info@xtransform.org">info@xtransform.org</a> </strong></p>
 
 
       </div>
+
+
+      <!--InfoMaterial
+    ==========================================-->
+      <div id="tmpl-InfoMaterial-accelerate" class="text-center">
+        <div class="overlay">
+          <div class="content">
+            <h1>
+              <strong>
+                <span>InfoMaterial</span>
+              </strong>
+            </h1>
+          </div>
+        </div>
+      </div>
+      <!-- InfoMaterial
+    ==========================================-->
+
+      <div id="tmpl-InfoMaterial" class="tmpl">
+        <div class="container">
+
+          <div class="row">
+            <div class="col-12" v-for="download in downloads">
+<a v-bind:href="download.field_pdf[0].url">{{ download.title[0].value }}</a>
+
+
+          </div>
+        </div>
+      </div>
+  </div>
+
 
       <!-- Bilder
     ==========================================-->
@@ -257,12 +291,12 @@
       <!-- Bilder
     ==========================================-->
 
-      <div id="tmpl-img">
+      <div id="tmpl-img" class="tmpl">
         <div class="container">
 
           <div class="row text-center">
             <div class="col-md-4" v-for="image in images">
-            <img v-bind:src=" image.field_images[0].url " alt="" width="300px" height="300px" class="object-fit_fill m-4">
+            <img v-bind:src=" image.field_images[0].url " alt="" width="300px" height="250px" class="object-fit_contain">
             </div>
           </div>
         </div>

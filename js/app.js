@@ -1,4 +1,4 @@
-apiURL = "http://x-transform-backend.kontrollfeld.net";
+apiURL = "https://x-transform-backend.kontrollfeld.net";
 
 
 new Vue({

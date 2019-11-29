@@ -167,8 +167,10 @@ ul, ol {
   background-size: cover;
   background-position: right;
   background-repeat: no-repeat;
-  padding: 80px 0;
+  padding: 20px 0 40px 0;
   min-height: 400px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 .tmpl-top {
   width: 100%;
@@ -403,25 +405,29 @@ ul {
 }
 
 .card.event {
-  background-image: linear-gradient(90deg, rgba(143, 8, 8, 0.7) 0%, rgba(143, 8, 8, 0.7) 5%, #ffffff 5%, #ffffff 100%);
-  padding-left: 0.75rem;
-  border: 1px solid rgba(143, 8, 8, 0.7);
+  /* background-image: linear-gradient(90deg, rgba(143, 8, 8, 0.7) 0%, rgba(143, 8, 8, 0.7) 5%, #ffffff 5%, #ffffff 100%); */
+   /* padding-left: 0.75rem; */
+
+  border: 1px solid #222;
 }
 
+.card.event .card-title{
+  color:rgba(143, 8, 8, 0.7);
+}
 .card-header {
-  padding: 0.75rem 1.25rem;
+  /* padding: 0.75rem 1.25rem;
   margin-bottom: 0;
   background-color: rgba(0, 0, 0, 0.00);
   border-top: none;
-  border-bottom: none;
+  border-bottom: none; */
 }
 
 .card-footer {
-  padding: 0.75rem 1.25rem;
+  /* padding: 0.75rem 1.25rem;
   margin-bottom: 0;
   background-color: rgba(0, 0, 0, 0.00);
   border-top: none;
-  border-bottom: 1px solid rgba(143, 8, 8, 0.7);
+  border-bottom: 1px solid rgba(143, 8, 8, 0.7); */
 }
 
 .event {
@@ -429,5 +435,5 @@ ul {
 }
 
 .twitter-follow-button {
-  vertical-align: bottom; 
+  vertical-align: bottom;
 }

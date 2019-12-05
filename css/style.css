@@ -172,6 +172,11 @@ ul, ol {
   overflow-wrap: break-word;
   word-wrap: break-word;
 }
+#tmpl-InfoMaterial{
+min-height: 200px;
+
+}
+
 .tmpl-top {
   width: 100%;
   background: white;
@@ -288,8 +293,8 @@ button.btn.tmpl-btn.btn-default {
 
 /* Footer */
 nav#footer {
-  background: #E6D5C2;
-  color: #ffffff;
+
+  border-top: 1px #222 solid;
   padding: 20px 0 15px 0;
 }
 

@@ -438,7 +438,17 @@ ul {
 .event {
   margin: 2.5rem;
 }
-
+/* twitter */
 .twitter-follow-button {
   vertical-align: bottom;
+}
+
+span.cssbox_thumb > img{
+  max-width: 100%;
+  height: auto;
+}
+
+span.cssbox_full > img{
+  max-width: 100%;
+  height: auto;
 }

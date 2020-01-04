@@ -1,5 +1,4 @@
-apiURL = "https://x-transform-backend.kontrollfeld.net";
-
+apiURL = "http://localhost:8888/vanessa/parkplatz_transform/park_trans_backend/web";
 
 new Vue({
     el: '#app',

@@ -15,6 +15,7 @@
     <!-- Stylesheet
     ================================================== -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/cssbox.css">
     <link rel="stylesheet" type="text/css" href="css/responsive.css">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
@@ -84,7 +85,7 @@
             <div class="content">
               <div class="row">
                 <div class="col-md-4 order-md-last text-center text-md-right">
-                  <img src="images/logo.png" alt="" width="320px" height="auto">
+                  <img src="images/logo320.png" alt="" width="320px" height="auto">
                 </div>
                 <div class="col-md-8">
                   <div class="card teaser">
@@ -211,7 +212,6 @@
                         <span>Initiative <wbr>ParkplatzTransform</span>
                       </strong>
                     </h1>
-                    <hr>
                     <div id="summary">
                       <p class="collapse" id="collapseSummary">
                         Fast alle sind sich einig: Berlin leidet unter zu vielen Autos. Autos verschmutzen die Luft in unserer Stadt. Autos verletzen und töten Radfahrende und Fußgänger*innen. Autos sind mitverantwortlich für die Klimakatastrophe.
@@ -302,9 +302,17 @@
           <div class="container">
 
             <div class="row text-center">
-              <div class="col-md-4" v-for="image in images">
-                <img v-bind:src=" image.field_images[0].url " alt="" width="300px" height="250px" class="object-fit_contain">
-                <p>{{ image.title[0].value }}</p>
+              <div class="col-lg-4 col-md-4 col col-sm-6 col-12" v-for="image in images">
+                <div class="cssbox">
+                  <a v-bind:id="'image' + image.nid" v-bind:href="'#image' + image.nid">
+                    <span class="cssbox_thumb " v-html= image.field_images_small></span>
+                  <p class="mt-2">{{ image.title }}</p>
+                <span class="cssbox_full " v-html= image.field_images_large >
+                </span>
+              </a>
+              <a class="cssbox_close" href="#void"></a>
+            </div>
+
               </div>
             </div>
           </div>

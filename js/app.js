@@ -43,6 +43,10 @@ new Vue({
                 // this.$set('imagesUrl', images[0].field_images[0].url);
 
             });
+        },
+        getAbsoluteImageUrl: function(relativeImageUrl) {
+          console.log(relativeImageUrl);
+          return apiURL + '/' + relativeImageUrl;
         }
 
     }

@@ -64,11 +64,11 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="pt-navbar-collapse-1">
           <ul class="nav navbar-nav ml-auto mt-2 mt-lg-0">
-            <li class="nav-item"><a class="nav-link" href="#tmpl-aktuell-accelerate" class="page-scroll">Aktuelles</a></li>
-            <li class="nav-item"><a class="nav-link" href="#tmpl-socialMedia-accelerate" class="page-scroll">SocialMedia</a></li>
-            <li class="nav-item"><a class="nav-link" href="#tmpl-about-accelerate" class="page-scroll">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="#tmpl-InfoMaterial-accelerate" class="page-scroll">InfoMaterial</a></li>
-            <li class="nav-item"><a class="nav-link" href="#tmpl-img-accelerate" class="page-scroll">Bilder</a></li>
+            <li class="nav-item"><a class="nav-link" href="#aktuell" class="page-scroll">Aktuelles</a></li>
+            <li class="nav-item"><a class="nav-link" href="#socialMedia" class="page-scroll">SocialMedia</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about" class="page-scroll">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#InfoMaterial" class="page-scroll">InfoMaterial</a></li>
+            <li class="nav-item"><a class="nav-link" href="#img" class="page-scroll">Bilder</a></li>
           </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -133,7 +133,7 @@
         </div>
         <!-- Aktuell
     ==========================================-->
-
+        <div id="aktuell" class="anchor"></div>
         <div id="tmpl-aktuell" class="tmpl">
           <div class="container">
 
@@ -168,7 +168,7 @@
         </div>
         <!-- SocialMedia
     ==========================================-->
-
+        <div id="socialMedia" class="anchor"></div>
         <div id="tmpl-socialMedia" class="tmpl">
           <div class="container">
 
@@ -198,6 +198,7 @@
         </div>
         <!-- About Us Page
   ==========================================-->
+        <div id="about" class="anchor"></div>
         <div id="tmpl-about" class="tmpl">
 
           <div class="red_bg">
@@ -209,7 +210,7 @@
                   <div class="inner">
                     <h1>
                       <strong>
-                        <span>Initiative <wbr>ParkplatzTransform</span>
+                        <span>Initiative <wbr>Parkplatz<wbr>Transform</span>
                       </strong>
                     </h1>
                     <div id="summary">
@@ -268,7 +269,7 @@
         </div>
         <!-- InfoMaterial
     ==========================================-->
-
+        <div id="InfoMaterial" class="anchor"></div>
         <div id="tmpl-InfoMaterial" class="tmpl">
           <div class="container">
 
@@ -297,25 +298,23 @@
         </div>
         <!-- Bilder
     ==========================================-->
-
+        <div id="img" class="anchor"></div>
         <div id="tmpl-img" class="tmpl">
           <div class="container">
 
             <div class="row text-center">
-              <!-- <div class="col-lg-4 col-md-4 col col-sm-6 col-12" v-for="image in images"> -->
-                <!-- <div class="cssbox">
+              <div class="col-lg-4 col-md-4 col col-sm-6 col-12" v-for="image in images">
+                <div class="cssbox">
                   <a v-bind:id="'image' + image.nid" v-bind:href="'#image' + image.nid">
-                    <span class="cssbox_thumb " v-html= image.field_images_small></span>
+                    <span class="cssbox_thumb">
+                      <img v-bind:src="getAbsoluteImageUrl(image.field_images_small)">
+                    </span>
                   <p class="mt-4">{{ image.title }}</p>
-                <span class="cssbox_full" v-html= image.field_images_large >
-                </span>
+                  <span class="cssbox_full">
+                    <img v-bind:src="getAbsoluteImageUrl(image.field_images_large)">
+                  </span>
               </a>
-              <a class="cssbox_close" href="#void"></a> -->
-              <div class="col-md-4" v-for="image in images">
-                <img v-bind:src=" image.field_images[0].url " alt="" width="300px" height="250px" class="object-fit_contain">
-                <p>{{ image.title[0].value }}</p>
-
-              </div>
+              <a class="cssbox_close" href="#void"></a>
 
               </div>
             </div>

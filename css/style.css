@@ -452,3 +452,13 @@ span.cssbox_full > img{
   max-width: 100%;
   height: auto;
 }
+
+.anchor{
+	visibility: hidden;
+	height: 0px !important;
+	position: absolute;
+	margin: -200px;
+}
+
+/* .handler { width: 600px; }
+.handler > div { display: inline-block; } */

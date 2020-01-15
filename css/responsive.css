@@ -1,6 +1,11 @@
 @media (max-width: 768px) {
   .content {
-    padding: 2% 0 0;
+    padding: 4% 0 0;
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
   }
   .on {
 
@@ -78,6 +83,12 @@
   .hover-bg .hover-text {
     padding: 12% 10%;
   }
+  .anchor{
+  visibility: hidden;
+  height: 0px !important;
+  position: absolute;
+  margin: -150px;
+}
 }
 
 @media (max-width: 360px) {

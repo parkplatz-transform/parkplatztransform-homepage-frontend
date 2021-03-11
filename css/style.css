@@ -210,12 +210,12 @@ min-height: 200px;
 .teaser {
   color: #222;;
   line-height: 32px;
-  letter-spacing: 0.1em;
+  /* letter-spacing: 0.1em; */
   margin-left: 1rem;
 }
 
 .teaser p {
-  font-size: 26px;
+  font-size: 20px;
 }
 
 .teaser_headline {
@@ -225,7 +225,7 @@ min-height: 200px;
 
 .teaser_call {
   font-weight: bold;
-  font-size: 26px;
+  font-size: 20px;
 }
 
 #tmpl-home h1 {
